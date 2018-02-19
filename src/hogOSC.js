@@ -27,10 +27,10 @@ var getIPAddresses = function() {
 };
 
 var udpPort = new osc.UDPPort({
-  localAddress: "192.168.0.22",
+  localAddress: "10.50.2.56",
   localPort: 1001,
-  remotePort: 2001, //Hog console port number
-  remoteAddress: "192.168.0.200" // Hog console IP Address.
+  remotePort: 7001, //Hog console port number
+  remoteAddress: "10.50.2.56" // Hog console IP Address.
 });
 
 var isPortReady = udpPort.on("ready", function() {
@@ -60,6 +60,4 @@ var sendGo1 = udpPort.send({
   args: [{}]
 });
 
-var functions = [isPortReady(), getMessage(), sendGo1()];
-
-export default functions;
+sendGo1();
