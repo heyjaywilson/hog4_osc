@@ -1,0 +1,20 @@
+{
+  "name": "hog4-osc",
+  "version": "1.0.0",
+  "description": "OSC controller for Hog 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maeganjwilson/hog4-osc.git"
+  },
+  "keywords": ["osc", "hog", "4", "lighting", "node"],
+  "author": "Maegan Wilson <maegan@maeganwilson.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maeganjwilson/hog4-osc/issues"
+  },
+  "homepage": "https://github.com/maeganjwilson/hog4-osc#readme"
+}
