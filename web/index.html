@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./node_modules/osc/dist/osc.js"></script>
+  <script src="./socket-hog.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>OSC JS</h1>
+  <div id="messageArea">
+    <p id="messageLabel">OSC Message:</p>
+    <pre id="message"></pre>
+  </div>
+  <script>
+    var socketHog = new example.SocketHog();
+  </script>
+</body>
+
+</html>
