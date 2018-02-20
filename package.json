@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/maeganjwilson/hog4-osc/issues"
   },
-  "homepage": "https://github.com/maeganjwilson/hog4-osc#readme"
+  "homepage": "https://github.com/maeganjwilson/hog4-osc#readme",
+  "dependencies": {
+    "osc": "^2.2.0"
+  }
 }
