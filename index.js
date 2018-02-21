@@ -33,14 +33,11 @@ udpPort.on("ready", function() {
   ipAddresses.forEach(function(address) {
     console.log(" Host:", address + ", Port:", udpPort.options.localPort);
   });
-  console.log(
-    "To start the demo, go to http://localhost:8080 in your web browser."
-  );
 });
 
 var wss = new WebSocket.Server({
-    port: 8081
-})
+  port: 8081
+});
 udpPort.open();
 
 wss.on("connection", function(socket) {

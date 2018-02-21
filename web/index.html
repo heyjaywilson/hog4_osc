@@ -3,19 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <script src="/bower_components/osc.js/dist/osc-browser.js"></script>
+  <script src="./bower_components/osc.js/dist/osc-browser.min.js"></script>
   <script type="text/javascript">
     var port = new osc.WebSocketPort({
       url: "ws://localhost:8081"
     });
 
     port.open();
-    
-    var goCL = function(){
+
+    var goCL = function () {
       port.send({
-        address: "/ hog / playback / go / 0 / 1",
-        args: []
+        address: '/hog/playback/go/0/1',
+        args: [{
+          type: "f",
+          value: "1"
+        }]
       });
+      console.log('sending hog command');
     };
   </script>
   <title>Hog 4 OSC</title>
