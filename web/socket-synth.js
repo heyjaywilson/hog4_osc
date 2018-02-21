@@ -40,10 +40,11 @@ var example = example || {};
 
     this.listen();
     this.oscPort.open();
-
     this.oscPort.socket.onmessage = function(e) {
       console.log("message", e);
     };
+
+    this.goCL1();
 
     this.valueMap = {
       "/knobs/0": carrierSpec.freq,
@@ -115,5 +116,13 @@ var example = example || {};
       var transformed = transformSpec.transform(value);
       this.synth.set(transformSpec.inputPath, transformed);
     }
+  };
+  example.SocketHog.prototype.goCL1 = function() {
+    this.oscPort.on("ready", function() {
+      this.oscPort.send({
+        address: "/ hog / playback / go / 0 / 1",
+        args: []
+      });
+    });
   };
 })();
