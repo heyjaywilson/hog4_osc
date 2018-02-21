@@ -1,5 +1,6 @@
-var example = example || {};
-
-example.socketHog = function() {
-  console.log("constructor");
+var example = {
+  SocketHog: function() {
+    console.log("THIS");
+    
+  }
 };
