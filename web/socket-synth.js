@@ -33,7 +33,7 @@ var example = example || {};
     }
   };
 
-  example.SocketSynth = function() {
+  example.SocketHog = function() {
     this.oscPort = new osc.WebSocketPort({
       url: "ws://localhost:8080"
     });
@@ -83,7 +83,7 @@ var example = example || {};
     });
   };
 
-  example.SocketSynth.prototype.listen = function() {
+  example.SocketHog.prototype.listen = function() {
     this.oscPort.on("open", this.play.bind(this));
     this.oscPort.on("message", this.mapMessage.bind(this));
     this.oscPort.on("message", function(msg) {
@@ -92,7 +92,7 @@ var example = example || {};
     this.oscPort.on("close", this.pause.bind(this));
   };
 
-  example.SocketSynth.prototype.play = function() {
+  example.SocketHog.prototype.play = function() {
     if (!flock.enviro.shared) {
       flock.init();
     }
@@ -100,11 +100,11 @@ var example = example || {};
     this.synth.play();
   };
 
-  example.SocketSynth.prototype.pause = function() {
+  example.SocketHog.prototype.pause = function() {
     this.synth.pause();
   };
 
-  example.SocketSynth.prototype.mapMessage = function(oscMessage) {
+  example.SocketHog.prototype.mapMessage = function(oscMessage) {
     $("#message").text(fluid.prettyPrintJSON(oscMessage));
 
     var address = oscMessage.address;
