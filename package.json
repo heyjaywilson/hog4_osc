@@ -10,13 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/maeganjwilson/hog4-osc.git"
   },
-  "keywords": [
-    "osc",
-    "hog",
-    "4",
-    "lighting",
-    "node"
-  ],
+  "keywords": ["osc", "hog", "4", "lighting", "node"],
   "author": "Maegan Wilson <maegan@maeganwilson.com>",
   "license": "ISC",
   "bugs": {
