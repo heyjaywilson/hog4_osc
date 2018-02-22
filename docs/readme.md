@@ -30,8 +30,8 @@ You will need node, npm, and bower. If you are unfamiliar with these tools, ther
 
 Make sure you are in hog4-osc in the terminal
 
-7. Type `node .`
-8. Open the index.html file in your browser
+1. Type `node .`
+2. Open the index.html file in your browser
 
 ## Tests
 
