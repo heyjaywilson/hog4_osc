@@ -2,9 +2,4 @@
 
 This is a browser based OSC controller for Hog 4 OS.
 
-Platforms tested on:
-
-| Platform      | Browsers Tested | Passed     | Failed     |
-| ------------- | --------------- | ---------- | ---------- |
-| MacOS 10.13.3 | Chrome          | not tested | not tested |
-| Windows 10    | Chrome          | not tested | not tested |
+Please go [here](https://maeganjwilson.github.io/hog4-osc/) for more information about the application.
