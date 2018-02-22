@@ -1,5 +1,5 @@
-var osc = require("osc"),
-  WebSocket = require("ws");
+var osc = require("osc");
+var WebSocket = require("ws");
 
 var getIPAddresses = function() {
   var os = require("os"),
