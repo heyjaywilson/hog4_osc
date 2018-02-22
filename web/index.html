@@ -4,30 +4,66 @@
 <head>
   <meta charset="UTF-8">
   <script src="./bower_components/osc.js/dist/osc-browser.min.js"></script>
-  <script type="text/javascript">
-    var port = new osc.WebSocketPort({
-      url: "ws://localhost:8081"
-    });
-
-    port.open();
-
-    var goCL = function () {
-      port.send({
-        address: '/hog/playback/go/0/1',
-        args: [{
-          type: "f",
-          value: "1"
-        }]
-      });
-      console.log('sending hog command');
-    };
+  <script src="./scripts/index.js">
   </script>
+  <link rel="stylesheet" href="./css/master.css">
   <title>Hog 4 OSC</title>
 </head>
 
 <body>
   <h1>Hog 4 OSC interface</h1>
-  <button onClick="goCL()">Go CL 1</button>
+  <div class="lists">
+    <div class="l1 list">
+      <button class="go" onClick="goCL(1)">GO LIST 1</button>
+      <button class="pa" onClick="pauseCL(1)">PAUSE LIST 1</button>
+      <button class="re" onClick="releaseCL(1)">RELEASE LIST 1</button>
+    </div>
+    <div class="l2 list">
+      <button class="go" onClick="goCL(2)">GO LIST 2</button>
+      <button class="pa" onClick="pauseCL(2)">PAUSE LIST 2</button>
+      <button class="re" onClick="releaseCL(2)">RELEASE LIST 2</button>
+    </div>
+    <div class="l3 list">
+      <button class="go" onClick="goCL(3)">GO LIST 3</button>
+      <button class="pa" onClick="pauseCL(3)">PAUSE LIST 3</button>
+      <button class="re" onClick="releaseCL(3)">RELEASE LIST 3</button>
+    </div>
+    <div class="l4 list">
+      <button class="go" onClick="goCL(4)">GO LIST 4</button>
+      <button class="pa" onClick="pauseCL(4)">PAUSE LIST 4</button>
+      <button class="re" onClick="releaseCL(4)">RELEASE LIST 4</button>
+    </div>
+    <div class="l5 list">
+      <button class="go" onClick="goCL(5)">GO LIST 5</button>
+      <button class="pa" onClick="pauseCL(5)">PAUSE LIST 5</button>
+      <button class="re" onClick="releaseCL(5)">RELEASE LIST 5</button>
+    </div>
+    <div class="l6 list">
+      <button class="go" onClick="goCL(6)">GO LIST 6</button>
+      <button class="pa" onClick="pauseCL(6)">PAUSE LIST 6</button>
+      <button class="re" onClick="releaseCL(6)">RELEASE LIST 6</button>
+    </div>
+    <div class="l7 list">
+      <button class="go" onClick="goCL(7)">GO LIST 7</button>
+      <button class="pa" onClick="pauseCL(7)">PAUSE LIST 7</button>
+      <button class="re" onClick="releaseCL(7)">RELEASE LIST 7</button>
+    </div>
+    <div class="l8 list">
+      <button class="go" onClick="goCL(8)">GO LIST 8</button>
+      <button class="pa" onClick="pauseCL(8)">PAUSE LIST 8</button>
+      <button class="re" onClick="releaseCL(8)">RELEASE LIST 8</button>
+    </div>
+    <div class="l9 list">
+      <button class="go" onClick="goCL(9)">GO LIST 9</button>
+      <button class="pa" onClick="pauseCL(9)">PAUSE LIST 9</button>
+      <button class="re" onClick="releaseCL(9)">RELEASE LIST 9</button>
+    </div>
+    <div class="l0 list">
+      <button class="go" onClick="goCL(0)">GO LIST 10</button>
+      <button class="pa" onClick="pauseCL(0)">PAUSE LIST 10</button>
+      <button class="re" onClick="releaseCL(0)">RELEASE LIST 10</button>
+    </div>
+  </div>
 </body>
 
 </html>
