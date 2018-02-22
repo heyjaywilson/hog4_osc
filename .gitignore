@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/web/node_modules
+/web/bower_components
 
 # testing
 /coverage
