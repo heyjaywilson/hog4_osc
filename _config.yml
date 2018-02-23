@@ -1,2 +1,4 @@
 theme: jekyll-theme-architect
 show_downloads: true
+title: Hog 4 OSC Controller
+description: A browser based OSC controller for Hog 4 control systems.
