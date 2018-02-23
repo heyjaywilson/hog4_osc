@@ -63,3 +63,13 @@ body {
 .re {
   grid-area: re;
 }
+
+.programming {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-areas: ". content .";
+  margin-top: 40px;
+}
+.content {
+  grid-area: content;
+}
