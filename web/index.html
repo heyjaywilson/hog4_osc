@@ -12,6 +12,12 @@
 
 <body>
   <h1>Hog 4 OSC interface</h1>
+  <div class="rfu">
+    <form id="fixtureSelect">
+      Fixture(s): <input type="text"/>
+    </form>
+    <button onClick="highlight()">High light</button>
+  </div>
   <div class="lists">
     <div class="l1 list">
       <button class="go" onClick="goCL(1)">GO LIST 1</button>
@@ -63,13 +69,6 @@
       <button class="pa" onClick="pauseCL(10)">PAUSE LIST 10</button>
       <button class="re" onClick="releaseCL(10)">RELEASE LIST 10</button>
     </div>
-  </div>
-  <div class="programming">
-    <form class="content">
-      <label for="fixtNum">Fixture number <input type="text" name="fixtNum"></label> @
-      <label for="intLevel">Intensity level <input type="number" name="intLevel" min="0" max="100"></label>
-      <button type="button" name="enter">Enter</button>
-    </form>
   </div>
 </body>
 
