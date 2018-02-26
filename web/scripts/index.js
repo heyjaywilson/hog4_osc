@@ -45,3 +45,14 @@ var releaseCL = function(num) {
   });
   console.log("sending message: " + message);
 };
+
+var getText = function(id) {
+  let text = document.getElementById(id)[0].value;
+  return Array.from(text);
+};
+
+var highlight = function() {
+  let button_pushes = getText("fixtureSelect");
+  console.log(button_pushes);
+  let mess = "/hog/hardware/highlight";
+};
