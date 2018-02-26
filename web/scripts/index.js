@@ -55,45 +55,46 @@ var getButtonPushes = function(arr) {
   arr.forEach(function(bttn) {
     switch (bttn) {
       case "1":
-        console.log("button pushed 1");
-        sendButtonPush("one");
+        buttonPush("one");
         break;
       case "2":
-        console.log("button pushed 2");
-        sendButtonPush("two");
+        buttonPush("two");
         break;
       case "3":
-        console.log("button pushed 3");
+        buttonPush("three");
         break;
       case "4":
-        console.log("button pushed 4");
+        buttonPush("four");
         break;
       case "5":
-        console.log("button pushed 5");
+        buttonPush("five");
         break;
       case "6":
-        console.log("button pushed 6");
+        buttonPush("six");
         break;
       case "7":
-        console.log("button pushed 7");
+        buttonPush("seven");
         break;
       case "8":
-        console.log("button pushed 8");
+        buttonPush("eight");
         break;
       case "9":
-        console.log("button pushed 9");
+        buttonPush("nine");
         break;
       case "0":
-        console.log("button pushed 0");
+        buttonPush("zero");
         break;
       case "+":
-        console.log("button pushed +");
+        buttonPush("plus");
         break;
       case "-":
-        console.log("button pushed -");
+        buttonPush("minus");
         break;
       case ">":
-        console.log("button pushed thru");
+        buttonPush("thru");
+        break;
+      case ".":
+        buttonPush("period");
         break;
       default:
         alert(bttn + " is not a valid Hog hardware button");
@@ -101,17 +102,8 @@ var getButtonPushes = function(arr) {
   });
 };
 
-var sendButtonPush = function(button) {
+var buttonPush = function(button) {
   var message = "/hog/hardware/" + button;
-  port.send({
-    address: message,
-    args: [
-      {
-        type: "f",
-        value: 0
-      }
-    ]
-  });
   port.send({
     address: message,
     args: [
@@ -121,12 +113,20 @@ var sendButtonPush = function(button) {
       }
     ]
   });
+  port.send({
+    address: message,
+    args: [
+      {
+        type: "f",
+        value: 0
+      }
+    ]
+  });
   console.log("sending message: " + message);
 };
 
 var highlight = function() {
   let button_pushes = getText("fixtureSelect");
   getButtonPushes(button_pushes);
-  console.log(button_pushes);
-  let mess = "/hog/hardware/highlight";
+  buttonPush("highlight");
 };
