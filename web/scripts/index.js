@@ -130,3 +130,7 @@ var highlight = function() {
   getButtonPushes(button_pushes);
   buttonPush("highlight");
 };
+
+var clearProgrammer = function() {
+  buttonPush("clear");
+};
