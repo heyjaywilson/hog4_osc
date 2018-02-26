@@ -134,3 +134,15 @@ var highlight = function() {
 var clearProgrammer = function() {
   buttonPush("clear");
 };
+
+var nextLight = function() {
+  buttonPush("next");
+};
+
+var backLight = function() {
+  buttonPush("back");
+};
+
+var allLight = function() {
+  buttonPush("all");
+};
