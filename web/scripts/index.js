@@ -4,7 +4,8 @@ var port = new osc.WebSocketPort({
 
 port.open();
 
-var goCL = function(num) {
+var goCL = function() {
+  let num = getNum("cuelistSelect");
   var message = "/hog/playback/go/0/" + num;
   port.send({
     address: message,
@@ -18,7 +19,8 @@ var goCL = function(num) {
   console.log("sending message: " + message);
 };
 
-var pauseCL = function(num) {
+var pauseCL = function() {
+  let num = getNum("cuelistSelect");
   var message = "/hog/playback/halt/0/" + num;
   port.send({
     address: message,
@@ -32,7 +34,8 @@ var pauseCL = function(num) {
   console.log("sending message: " + message);
 };
 
-var releaseCL = function(num) {
+var releaseCL = function() {
+  let num = getNum("cuelistSelect");
   var message = "/hog/playback/release/0/" + num;
   port.send({
     address: message,
@@ -46,9 +49,101 @@ var releaseCL = function(num) {
   console.log("sending message: " + message);
 };
 
+var goScene = function() {
+  let num = getNum("sceneSelection");
+  var message = "/hog/playback/go/1/" + num;
+  port.send({
+    address: message,
+    args: [
+      {
+        type: "f",
+        value: "1"
+      }
+    ]
+  });
+  console.log("sending message: " + message);
+};
+var pauseScene = function() {
+  let num = getNum("sceneSelection");
+  var message = "/hog/playback/halt/1/" + num;
+  port.send({
+    address: message,
+    args: [
+      {
+        type: "f",
+        value: "1"
+      }
+    ]
+  });
+  console.log("sending message: " + message);
+};
+var releaseScene = function() {
+  let num = getNum("sceneSelection");
+  var message = "/hog/release/go/1/" + num;
+  port.send({
+    address: message,
+    args: [
+      {
+        type: "f",
+        value: "1"
+      }
+    ]
+  });
+  console.log("sending message: " + message);
+};
+
+var buttonPush = function(button) {
+  var message = "/hog/hardware/" + button;
+  port.send({
+    address: message,
+    args: [
+      {
+        type: "f",
+        value: 1
+      }
+    ]
+  });
+  port.send({
+    address: message,
+    args: [
+      {
+        type: "f",
+        value: 0
+      }
+    ]
+  });
+  console.log("sending message: " + message);
+};
+
+var highlight = function() {
+  let button_pushes = getText("fixtureSelect");
+  getButtonPushes(button_pushes);
+  // todo: add button push for enter
+  buttonPush("highlight");
+};
+
+var clearProgrammer = function() {
+  buttonPush("clear");
+};
+
+var nextLight = function() {
+  buttonPush("next");
+};
+
+var backLight = function() {
+  buttonPush("back");
+};
+
+var allLight = function() {
+  buttonPush("all");
+};
 var getText = function(id) {
   let text = document.getElementById(id)[0].value;
   return Array.from(text);
+};
+
+var getNum = function(id) {
+  return document.getElementById(id)[0].value;
 };
 
 var getButtonPushes = function(arr) {
@@ -100,49 +195,4 @@ var getButtonPushes = function(arr) {
         alert(bttn + " is not a valid Hog hardware button");
     }
   });
-};
-
-var buttonPush = function(button) {
-  var message = "/hog/hardware/" + button;
-  port.send({
-    address: message,
-    args: [
-      {
-        type: "f",
-        value: 1
-      }
-    ]
-  });
-  port.send({
-    address: message,
-    args: [
-      {
-        type: "f",
-        value: 0
-      }
-    ]
-  });
-  console.log("sending message: " + message);
-};
-
-var highlight = function() {
-  let button_pushes = getText("fixtureSelect");
-  getButtonPushes(button_pushes);
-  buttonPush("highlight");
-};
-
-var clearProgrammer = function() {
-  buttonPush("clear");
-};
-
-var nextLight = function() {
-  buttonPush("next");
-};
-
-var backLight = function() {
-  buttonPush("back");
-};
-
-var allLight = function() {
-  buttonPush("all");
 };
