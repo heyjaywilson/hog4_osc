@@ -12,8 +12,16 @@
 
 <body>
   <h1>Hog 4 OSC interface</h1>
-  <div class="rfu">
+  <section>
     <h2>Fixture Control</h2>
+    <p>Type the fixture or fixtures you would like to high light.</p>
+    <ul>
+      <li>To select a range of fixtures, use
+        <code><</code> character</li>
+      <li>To select multiple fixtures at the same time use
+        <code>+</code>
+      </li>
+    </ul>
     <form id="fixtureSelect">
       Fixture(s):
       <input type="text" />
@@ -25,10 +33,11 @@
       <button onClick="allLight()">All</button>
       <button onClick="nextLight()">Next</button>
     </div>
-  </div>
-  <div class="cuelist">
+  </section>
+  <section>
     <h2>Playback Control</h2>
-    <section class="lists">
+    <p>Type in the list or scene number you would like to control.</p>
+    <section>
       <form id="cuelistSelect">
         List:
         <input type="number" min="1" />
@@ -39,7 +48,7 @@
         <button onClick="releaseCL()">Release List</button>
       </div>
     </section>
-    <section class="lists">
+    <section>
       <form id="sceneSelection">
         Scene:
         <input type="number" />
@@ -50,7 +59,7 @@
         <button onClick="releaseScene()">Release Scene</button>
       </div>
     </section>
-  </div>
+  </section>
 </body>
 
 </html>
