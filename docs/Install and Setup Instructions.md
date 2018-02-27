@@ -1,3 +1,8 @@
+---
+title: H4 OSC Install
+layout: default
+---
+
 # Install and Setup Instructions
 
 ## Prerequisites
