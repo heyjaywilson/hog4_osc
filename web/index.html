@@ -12,7 +12,7 @@
 
 <body class="container">
   <h1>Hog 4 OSC interface</h1>
-  <section id="programming" class="control fixture">
+  <section id="programming" class="control">
     <div class="desription">
       <h2>Fixture Control</h2>
       <p>Type the fixture or fixtures you would like to high light.</p>
@@ -24,40 +24,46 @@
         </li>
       </ul>
     </div>
-    <div class="fixt-select">
-      <form id="fixtureSelect">
+    <div class="fixt-select select">
+      <form id="fixtureSelect" class="select-form">
         Fixture(s):
         <input type="text" />
       </form>
-      <button onClick="highlight()">High light</button>
-      <button onClick="clearProgrammer()">Clear</button>
-      <div>
+      <div class="two-button-group">
+        <button onClick="highlight()">High
+          <br>light</button>
+        <button onClick="clearProgrammer()">Clear
+        </button>
+      </div>
+      <div class="three-button-group">
         <button onClick="backLight()">Back</button>
         <button onClick="allLight()">All</button>
         <button onClick="nextLight()">Next</button>
       </div>
     </div>
   </section>
-  <section id="playback" class="control">
-    <h2>Playback Control</h2>
-    <p>Type in the list or scene number you would like to control.</p>
-    <section class="list-selection">
-      <form id="cuelistSelect">
+  <section id="playback" class="control pb">
+    <div class="description">
+      <h2>Playback Control</h2>
+      <p>Type the list or scene number you would like to control.</p>
+    </div>
+    <section class="list-selection select l">
+      <form id="cuelistSelect" class="select-form">
         List:
         <input type="number" min="1" />
       </form>
-      <div>
+      <div class="three-button-group">
         <button onClick="goCL()">Go List</button>
         <button onClick="pauseCL()">Pause List</button>
         <button onClick="releaseCL()">Release List</button>
       </div>
     </section>
-    <section class="scene-selection">
-      <form id="sceneSelection">
+    <section class="scene-selection scene">
+      <form id="sceneSelection" class="select-form">
         Scene:
         <input type="number" />
       </form>
-      <div>
+      <div class="three-button-group">
         <button onClick="goScene()">Go Scene</button>
         <button onClick="pauseScene()">Pause Scene</button>
         <button onClick="releaseScene()">Release Scene</button>

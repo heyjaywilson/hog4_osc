@@ -33,12 +33,75 @@ h1 {
   padding: 20px;
   margin: 10px auto;
   background-color: #1f315f;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "d s s";
+  grid-column-gap: 20px;
 }
 
 .control h2 {
   margin-top: 0;
 }
 
-.fixture {
-  display: grid;
+.control button {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  vertical-align: top;
+}
+
+.control .description {
+  grid-area: d;
+}
+
+.control .select {
+  grid-area: s;
+}
+
+.control .l {
+  grid-area: l;
+}
+
+.control .scene {
+  grid-area: scene;
+}
+
+.select-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.select-form input {
+  border-radius: 10px;
+  border: 0;
+  padding: 5px;
+}
+
+.three-button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.three-button-group button {
+  width: 100px;
+}
+
+.scene-selection {
+  margin-top: 10px;
+}
+
+.pb {
+  grid-template-areas: "d l l" "d scene scene";
 }
