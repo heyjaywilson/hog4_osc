@@ -10,34 +10,38 @@
   <title>Hog 4 OSC</title>
 </head>
 
-<body>
+<body class="container">
   <h1>Hog 4 OSC interface</h1>
-  <section id="programming">
-    <h2>Fixture Control</h2>
-    <p>Type the fixture or fixtures you would like to high light.</p>
-    <ul>
-      <li>To select a range of fixtures, use
-        <code><</code> character</li>
-      <li>To select multiple fixtures at the same time use
-        <code>+</code>
-      </li>
-    </ul>
-    <form id="fixtureSelect">
-      Fixture(s):
-      <input type="text" />
-    </form>
-    <button onClick="highlight()">High light</button>
-    <button onClick="clearProgrammer()">Clear</button>
-    <div>
-      <button onClick="backLight()">Back</button>
-      <button onClick="allLight()">All</button>
-      <button onClick="nextLight()">Next</button>
+  <section id="programming" class="control fixture">
+    <div class="desription">
+      <h2>Fixture Control</h2>
+      <p>Type the fixture or fixtures you would like to high light.</p>
+      <ul>
+        <li>To select a range of fixtures, use
+          <code><</code> character</li>
+        <li>To select multiple fixtures at the same time use
+          <code>+</code>
+        </li>
+      </ul>
+    </div>
+    <div class="fixt-select">
+      <form id="fixtureSelect">
+        Fixture(s):
+        <input type="text" />
+      </form>
+      <button onClick="highlight()">High light</button>
+      <button onClick="clearProgrammer()">Clear</button>
+      <div>
+        <button onClick="backLight()">Back</button>
+        <button onClick="allLight()">All</button>
+        <button onClick="nextLight()">Next</button>
+      </div>
     </div>
   </section>
-  <section id="playback">
+  <section id="playback" class="control">
     <h2>Playback Control</h2>
     <p>Type in the list or scene number you would like to control.</p>
-    <section>
+    <section class="list-selection">
       <form id="cuelistSelect">
         List:
         <input type="number" min="1" />
@@ -48,7 +52,7 @@
         <button onClick="releaseCL()">Release List</button>
       </div>
     </section>
-    <section>
+    <section class="scene-selection">
       <form id="sceneSelection">
         Scene:
         <input type="number" />

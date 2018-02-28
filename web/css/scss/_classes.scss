@@ -1,0 +1,16 @@
+.control {
+  box-sizing: border-box;
+  border: 5px solid $border-color;
+  border-radius: $border-radius;
+  padding: $padding;
+  margin: $margin auto;
+  background-color: $section-color;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.fixture {
+  display: grid;
+}
