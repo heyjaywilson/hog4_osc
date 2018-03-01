@@ -1,0 +1,61 @@
+.control {
+  box-sizing: border-box;
+  border: 5px solid $border-color;
+  border-radius: $border-radius;
+  padding: $padding;
+  margin: $margin auto;
+  background-color: $section-color;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "d s s";
+  grid-column-gap: 20px;
+
+  h2 {
+    margin-top: 0;
+  }
+  button {
+    width: $button-width;
+    height: $button-height;
+    border-radius: $border-radius;
+    text-align: center;
+    border: none;
+    margin-left: $margin;
+    margin-top: $margin;
+    vertical-align: top;
+  }
+  .description {
+    grid-area: d;
+  }
+  .select {
+    grid-area: s;
+  }
+  .l {
+    grid-area: l;
+  }
+  .scene {
+    grid-area: scene;
+  }
+}
+.select-form {
+  display: flex;
+  justify-content: space-between;
+  input {
+    border-radius: $border-radius;
+    border: 0;
+    padding: ($padding/4);
+  }
+}
+.three-button-group {
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: ($button-width*2);
+  }
+}
+.scene-selection {
+  margin-top: $margin;
+}
+
+.pb {
+  grid-template-areas: "d l l" "d scene scene";
+}

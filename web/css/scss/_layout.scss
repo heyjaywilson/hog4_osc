@@ -1,0 +1,13 @@
+body {
+  width: $full-width;
+}
+@media only screen and (max-width: 945px) and (min-width: 750px) {
+  .container {
+    width: $tab-width;
+  }
+}
+@media only screen and (max-width: 749px) {
+  .container {
+    width: $phone-width;
+  }
+}

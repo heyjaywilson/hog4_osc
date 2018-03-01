@@ -4,30 +4,73 @@
 <head>
   <meta charset="UTF-8">
   <script src="./bower_components/osc.js/dist/osc-browser.min.js"></script>
-  <script type="text/javascript">
-    var port = new osc.WebSocketPort({
-      url: "ws://localhost:8081"
-    });
-
-    port.open();
-
-    var goCL = function () {
-      port.send({
-        address: '/hog/playback/go/0/1',
-        args: [{
-          type: "f",
-          value: "1"
-        }]
-      });
-      console.log('sending hog command');
-    };
+  <script src="./scripts/index.js">
   </script>
+  <link rel="stylesheet" href="./css/master.css">
   <title>Hog 4 OSC</title>
 </head>
 
-<body>
+<body class="container">
   <h1>Hog 4 OSC interface</h1>
-  <button onClick="goCL()">Go CL 1</button>
+  <section id="programming" class="control">
+    <div class="desription">
+      <h2>Fixture Control</h2>
+      <p>Type the fixture or fixtures you would like to high light.</p>
+      <ul>
+        <li>To select a range of fixtures, use
+          <code><</code> character</li>
+        <li>To select multiple fixtures at the same time use
+          <code>+</code>
+        </li>
+      </ul>
+    </div>
+    <div class="fixt-select select">
+      <form id="fixtureSelect" class="select-form">
+        Fixture(s):
+        <input type="text" />
+      </form>
+      <div class="three-button-group">
+        <button onClick="highlight()">High
+          <br>light</button>
+        <button onClick="clearProgrammer()">Clear
+        </button>
+        <button onClick="enter()">Enter</button>
+      </div>
+      <div class="three-button-group">
+        <button onClick="backLight()">Back</button>
+        <button onClick="allLight()">All</button>
+        <button onClick="nextLight()">Next</button>
+      </div>
+    </div>
+  </section>
+  <section id="playback" class="control pb">
+    <div class="description">
+      <h2>Playback Control</h2>
+      <p>Type the list or scene number you would like to control.</p>
+    </div>
+    <section class="list-selection select l">
+      <form id="cuelistSelect" class="select-form">
+        List:
+        <input type="number" min="1" />
+      </form>
+      <div class="three-button-group">
+        <button onClick="goCL()">Go List</button>
+        <button onClick="pauseCL()">Pause List</button>
+        <button onClick="releaseCL()">Release List</button>
+      </div>
+    </section>
+    <section class="scene-selection scene">
+      <form id="sceneSelection" class="select-form">
+        Scene:
+        <input type="number" />
+      </form>
+      <div class="three-button-group">
+        <button onClick="goScene()">Go Scene</button>
+        <button onClick="pauseScene()">Pause Scene</button>
+        <button onClick="releaseScene()">Release Scene</button>
+      </div>
+    </section>
+  </section>
 </body>
 
 </html>
