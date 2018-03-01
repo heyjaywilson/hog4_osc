@@ -39,5 +39,5 @@ Platforms tested on:
 
 | Platform      | Browsers Tested | Passed     | Failed     |
 | ------------- | --------------- | ---------- | ---------- |
-| MacOS 10.13.3 | Chrome          | not tested | not tested |
+| MacOS 10.13.3 | Chrome          | YES |  |
 | Windows 10    | Chrome          | not tested | not tested |
