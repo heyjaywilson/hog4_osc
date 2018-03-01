@@ -11,7 +11,7 @@ To run this “application” without any modification to the code, the Hog must
 
 ## How to use
 
-You will need node, npm, and bower. If you are unfamiliar with these tools, there is a more detailed document here.
+You will need node, npm, and bower. If you are unfamiliar with these tools, there is a more detailed document [here](https://maeganjwilson.github.io/hog4-osc/install-setup-instructions).
 
 ### Downloading and installing dependencies
 
