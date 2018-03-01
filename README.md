@@ -5,7 +5,9 @@ To run this “application” without any modification to the code, the Hog must
 
 ## Functions of the Controller
 
-* Go cue list 1
+* Go/Pause/Release a CueList
+* Go/Pause/Release a Scene
+* Highlight a ingle fixture or a group of fixtures
 
 ## How to use
 
@@ -17,10 +19,7 @@ You will need node, npm, and bower. If you are unfamiliar with these tools, ther
 
    * If you downloaded the zip folder, extract the files from the folder into their own folder named hog4-osc.
 
-2. Open the terminal and change your directory to your downloads folder
-
-   * You can do this by typing the following `cd downloads/hog4-osc`
-
+2. Open the terminal and change your directory to your folder names hog4-osc
 3. Type `npm install` and let this process run
 4. Now change directories to the web directory by typing the following `cd web`
 5. Type `bower install` and let this process run
@@ -39,5 +38,5 @@ Platforms tested on:
 
 | Platform      | Browsers Tested | Passed     | Failed     |
 | ------------- | --------------- | ---------- | ---------- |
-| MacOS 10.13.3 | Chrome          | YES |  |
+| MacOS 10.13.3 | Chrome          | YES | TEST PASSED |
 | Windows 10    | Chrome          | not tested | not tested |
