@@ -79,7 +79,7 @@ var pauseScene = function () {
 };
 var releaseScene = function () {
   let num = getNum("sceneSelection");
-  var message = "/hog/release/go/1/" + num;
+  var message = "/hog/playback/release/1/" + num;
   port.send({
     address: message,
     args: [
