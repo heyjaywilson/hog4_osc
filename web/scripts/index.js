@@ -116,9 +116,6 @@ var buttonPush = function(button) {
 };
 
 var highlight = function() {
-  let button_pushes = getText("fixtureSelect");
-  getButtonPushes(button_pushes);
-  enter();
   buttonPush("highlight");
 };
 
@@ -138,6 +135,11 @@ var backLight = function() {
 
 var allLight = function() {
   buttonPush("all");
+};
+var selectFixtures = function() {
+  let button_pushes = getText("fixtureSelect");
+  getButtonPushes(button_pushes);
+  enter();
 };
 var getText = function(id) {
   let text = document.getElementById(id)[0].value;
