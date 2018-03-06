@@ -126,8 +126,6 @@ var clearProgrammer = function() {
   buttonPush("clear");
 };
 var enter = function() {
-  let button_pushes = getText("fixtureSelect");
-  getButtonPushes(button_pushes);
   buttonPush("enter");
 };
 var nextLight = function() {
