@@ -4,7 +4,7 @@ var port = new osc.WebSocketPort({
 
 port.open();
 
-var goCL = function () {
+var goCL = function() {
   let num = getNum("cuelistSelect");
   var message = "/hog/playback/go/0/" + num;
   port.send({
@@ -19,7 +19,7 @@ var goCL = function () {
   console.log("sending message: " + message);
 };
 
-var pauseCL = function () {
+var pauseCL = function() {
   let num = getNum("cuelistSelect");
   var message = "/hog/playback/halt/0/" + num;
   port.send({
@@ -34,7 +34,7 @@ var pauseCL = function () {
   console.log("sending message: " + message);
 };
 
-var releaseCL = function () {
+var releaseCL = function() {
   let num = getNum("cuelistSelect");
   var message = "/hog/playback/release/0/" + num;
   port.send({
@@ -49,7 +49,7 @@ var releaseCL = function () {
   console.log("sending message: " + message);
 };
 
-var goScene = function () {
+var goScene = function() {
   let num = getNum("sceneSelection");
   var message = "/hog/playback/go/1/" + num;
   port.send({
@@ -63,7 +63,7 @@ var goScene = function () {
   });
   console.log("sending message: " + message);
 };
-var pauseScene = function () {
+var pauseScene = function() {
   let num = getNum("sceneSelection");
   var message = "/hog/playback/halt/1/" + num;
   port.send({
@@ -77,7 +77,7 @@ var pauseScene = function () {
   });
   console.log("sending message: " + message);
 };
-var releaseScene = function () {
+var releaseScene = function() {
   let num = getNum("sceneSelection");
   var message = "/hog/playback/release/1/" + num;
   port.send({
@@ -92,7 +92,7 @@ var releaseScene = function () {
   console.log("sending message: " + message);
 };
 
-var buttonPush = function (button) {
+var buttonPush = function(button) {
   var message = "/hog/hardware/" + button;
   port.send({
     address: message,
@@ -115,44 +115,43 @@ var buttonPush = function (button) {
   console.log("sending message: " + message);
 };
 
-var highlight = function () {
+var highlight = function() {
   let button_pushes = getText("fixtureSelect");
   getButtonPushes(button_pushes);
-  // todo: add button push for enter
   enter();
   buttonPush("highlight");
 };
 
-var clearProgrammer = function () {
+var clearProgrammer = function() {
   buttonPush("clear");
 };
-var enter = function () {
+var enter = function() {
   let button_pushes = getText("fixtureSelect");
   getButtonPushes(button_pushes);
   buttonPush("enter");
-}
-var nextLight = function () {
+};
+var nextLight = function() {
   buttonPush("next");
 };
 
-var backLight = function () {
+var backLight = function() {
   buttonPush("back");
 };
 
-var allLight = function () {
+var allLight = function() {
   buttonPush("all");
 };
-var getText = function (id) {
+var getText = function(id) {
   let text = document.getElementById(id)[0].value;
   return Array.from(text);
 };
 
-var getNum = function (id) {
+var getNum = function(id) {
   return document.getElementById(id)[0].value;
 };
 
-var getButtonPushes = function (arr) {
-  arr.forEach(function (bttn) {
+var getButtonPushes = function(arr) {
+  arr.forEach(function(bttn) {
     switch (bttn) {
       case "1":
         buttonPush("one");
