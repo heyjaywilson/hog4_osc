@@ -138,8 +138,14 @@ var allLight = function() {
 };
 var selectFixtures = function() {
   let button_pushes = getText("fixtureSelect");
+  var time = button_pushes.length * 200;
+  for (let i = 0; i < button_pushes; i++) {
+    time = 200 * i + time;
+  }
   getButtonPushes(button_pushes);
-  enter();
+  setTimeout(function() {
+    enter();
+  }, time);
 };
 var getText = function(id) {
   let text = document.getElementById(id)[0].value;
@@ -151,52 +157,54 @@ var getNum = function(id) {
 };
 
 var getButtonPushes = function(arr) {
-  arr.forEach(function(bttn) {
-    switch (bttn) {
-      case "1":
-        buttonPush("one");
-        break;
-      case "2":
-        buttonPush("two");
-        break;
-      case "3":
-        buttonPush("three");
-        break;
-      case "4":
-        buttonPush("four");
-        break;
-      case "5":
-        buttonPush("five");
-        break;
-      case "6":
-        buttonPush("six");
-        break;
-      case "7":
-        buttonPush("seven");
-        break;
-      case "8":
-        buttonPush("eight");
-        break;
-      case "9":
-        buttonPush("nine");
-        break;
-      case "0":
-        buttonPush("zero");
-        break;
-      case "+":
-        buttonPush("plus");
-        break;
-      case "-":
-        buttonPush("minus");
-        break;
-      case ">":
-        buttonPush("thru");
-        break;
-      case ".":
-        buttonPush("period");
-        break;
-      default:
-        alert(bttn + " is not a valid Hog hardware button");
-    }
-  });
+  for (let i = 0; i < arr.length; i++) {
+    setTimeout(function timer() {
+      switch (arr[i]) {
+        case "1":
+          buttonPush("one");
+          break;
+        case "2":
+          buttonPush("two");
+          break;
+        case "3":
+          buttonPush("three");
+          break;
+        case "4":
+          buttonPush("four");
+          break;
+        case "5":
+          buttonPush("five");
+          break;
+        case "6":
+          buttonPush("six");
+          break;
+        case "7":
+          buttonPush("seven");
+          break;
+        case "8":
+          buttonPush("eight");
+          break;
+        case "9":
+          buttonPush("nine");
+          break;
+        case "0":
+          buttonPush("zero");
+          break;
+        case "+":
+          buttonPush("plus");
+          break;
+        case "-":
+          buttonPush("minus");
+          break;
+        case ">":
+          buttonPush("thru");
+          break;
+        case ".":
+          buttonPush("period");
+          break;
+        default:
+          alert(bttn + " is not a valid Hog hardware button");
+      }
+    }, 200 * i);
+  }
 };
