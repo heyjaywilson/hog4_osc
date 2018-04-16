@@ -1,3 +1,6 @@
+[![GitHub issues](https://img.shields.io/github/issues/maeganjwilson/hog4-osc.svg)](https://github.com/maeganjwilson/hog4-osc/issues)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/maeganjwilson/hog4-osc.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fmaeganjwilson%2Fhog4-osc)
+
 # Hog 4 OSC Controller
 
 This is a browser based OSC controller for Hog 4 OS.
