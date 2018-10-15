@@ -22,4 +22,14 @@ Use these commands to go, halt, resume, and release playback items not tied to b
 
 | Hog 4 OS | OSC Command Path | Data | Example |
 |----|----|----|----|
-| Midi note on | `/hog/midi/on/channel_number/note_number` | velocity | `/hog/midi/on/0/1/2`
+| Midi note on | `/hog/midi/on/channel_number/note_number` | velocity | `/hog/on/midi/on/0/1/2` |
+| Midi note off | `/hog/midi/off/channel_number/note_number` | velocity | `/hog/off/midi/on/0/1/2` |
+
+## Hardware Mappings
+
+| Hog 4 OS | OSC Command Path | Data | Example |
+|----|----|----|----|
+| Choose keys | `/hog/hardware/choose/master_number` | 0 = button up | `/hog/hardware/choose/1/0` releases the button |
+||| 1 = button down | `/hog/hardware/choose/1/1` pushes the botton down |
+| Go keys | `/hog/hardware/go/master_number` | 0 = button up | `/hog/hardware/go/1/0` releases the button |
+||| 1 = button down | `/hog/hardware/go/1/1` pushes the botton down |
