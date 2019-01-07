@@ -29,7 +29,11 @@ Use these commands to go, halt, resume, and release playback items not tied to b
 
 | Hog 4 OS | OSC Command Path | Data | Example |
 |----|----|----|----|
-| Choose keys | `/hog/hardware/choose/master_number` | 0 = button up | `/hog/hardware/choose/1/0` releases the button |
-||| 1 = button down | `/hog/hardware/choose/1/1` pushes the botton down |
-| Go keys | `/hog/hardware/go/master_number` | 0 = button up | `/hog/hardware/go/1/0` releases the button |
-||| 1 = button down | `/hog/hardware/go/1/1` pushes the botton down |
+| Choose keys | `/hog/hardware/choose/master_number` | 0 = button up | `/hog/hardware/choose/1/0` releases the choose button on master one |
+||| 1 = button down | `/hog/hardware/choose/1/1` pushes the choose button on master one down |
+| Go keys | `/hog/hardware/go/master_number` | 0 = button up | `/hog/hardware/go/1/0` releases the go button on master one |
+||| 1 = button down | `/hog/hardware/go/1/1` pushes the go button on master one down |
+| Halt Keys | `/hog/hardware/pause/master_number` | 0 = button up | `/hog/hardware/pause/1/0` releases the halt button on master one |
+||| 1 = button down | `/hog/hardware/pause/1/1` | pushes the halt button on master one |
+| Back Keys | `/hog/hardware/goback/master_number` | 0 = button up | `/hog/hardware/goback/1/0` releases the back button on master one |
+||| 1 = button down | `/hog/hardware/goback/1/1` | pushes the back button on master one |
